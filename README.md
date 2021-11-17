@@ -4,3 +4,39 @@
 make run
 make init
 ```
+
+<img src="http://patshaughnessy.net/assets/2017/12/11/example-tree.png">
+
+http://patshaughnessy.net/assets/2017/12/11/example-tree.png ^^
+
+
+```
+ count
+-------
+     8
+(1 row)
+
+ count
+-------
+     2
+(1 row)
+
+ id | letter | path
+----+--------+-------
+  1 | A      | A
+  2 | B      | A.B
+  3 | C      | A.C
+  4 | D      | A.C.D
+  5 | E      | A.C.E
+  6 | F      | A.C.F
+  7 | G      | A.B.G
+  8 | E      | A
+(8 rows)
+
+ id | letter | path
+----+--------+-------
+  2 | B      | A.B
+  7 | G      | A.B.G
+(2 rows)
+
+```
