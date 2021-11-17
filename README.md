@@ -5,13 +5,6 @@ make run
 make init
 ```
 
-Inspired by http://patshaughnessy.net/2017/12/13/saving-a-tree-in-postgres-using-ltree
-
-<img src="http://patshaughnessy.net/assets/2017/12/11/example-tree.png">
-
-http://patshaughnessy.net/assets/2017/12/11/example-tree.png ^^
-
-
 ```
  count
 -------
@@ -42,3 +35,19 @@ http://patshaughnessy.net/assets/2017/12/11/example-tree.png ^^
 (2 rows)
 
 ```
+
+## Postgres and Graphs
+
+First, let's play around and get a tree data structure working in Postgres. Next, let's move on to a DAG. Finally, consider cycles.
+
+### ltree
+
+Inspired by http://patshaughnessy.net/2017/12/13/saving-a-tree-in-postgres-using-ltree
+
+<img src="http://patshaughnessy.net/assets/2017/12/11/example-tree.png">
+
+http://patshaughnessy.net/assets/2017/12/11/example-tree.png ^^
+
+### DAG
+
+https://www.bustawin.com/dags-with-materialized-paths-using-postgres-ltree/
