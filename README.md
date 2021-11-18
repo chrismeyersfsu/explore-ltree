@@ -2,7 +2,7 @@
 
 ```
 make run
-make init
+make tree
 ```
 
 ```
@@ -36,6 +36,34 @@ make init
 
 ```
 
+```
+make dag
+
+ id |   name    |  path
+----+-----------+---------
+  1 | Animal    | 1
+  2 | Pet       | 1.2
+  3 | Livestock | 1.3
+  4 | Cat       | 1.2.4
+  5 | Dog       | 1.2.5
+  5 | Dog       | 1.3.5
+  6 | Sheep     | 1.2.6
+  6 | Sheep     | 1.3.6
+  7 | Cow       | 1.3.7
+  8 | Doberman  | 1.2.5.8
+  8 | Doberman  | 1.3.5.8
+  9 | Bulldog   | 1.2.5.9
+  9 | Bulldog   | 1.3.5.9
+(13 rows)
+
+ name  | path
+-------+-------
+ Dog   | 1.3.5
+ Sheep | 1.3.6
+ Cow   | 1.3.7
+(3 rows)
+```
+
 ## Postgres and Graphs
 
 First, let's play around and get a tree data structure working in Postgres. Next, let's move on to a DAG. Finally, consider cycles.
@@ -48,6 +76,14 @@ Inspired by http://patshaughnessy.net/2017/12/13/saving-a-tree-in-postgres-using
 
 http://patshaughnessy.net/assets/2017/12/11/example-tree.png ^^
 
+```
+make tree
+```
+
 ### DAG
 
 https://www.bustawin.com/dags-with-materialized-paths-using-postgres-ltree/
+
+```
+make dag
+```
