@@ -36,9 +36,37 @@ make tree
 
 ```
 
+## Postgres and Graphs
+
+First, let's play around and get a tree data structure working in Postgres. Next, let's move on to a DAG. Finally, consider cycles.
+
+### ltree
+
+Inspired by http://patshaughnessy.net/2017/12/13/saving-a-tree-in-postgres-using-ltree
+
+<img src="http://patshaughnessy.net/assets/2017/12/11/example-tree.png">
+
+
+```
+make tree
+```
+
+
+### DAG
+
+
+https://www.bustawin.com/dags-with-materialized-paths-using-postgres-ltree/
+
+<img src="https://www.codeproject.com/KB/database/Modeling_DAGs_on_SQL_DBs/Figure3.gif">
+
+In the example below we execute "give me all the Livestock". This returns all children of `Livestock` i.e. `Dog, Sheep, Cow`.
+
+
 ```
 make dag
+```
 
+```
  id |   name    |  path
 ----+-----------+---------
   1 | Animal    | 1
@@ -64,26 +92,3 @@ make dag
 (3 rows)
 ```
 
-## Postgres and Graphs
-
-First, let's play around and get a tree data structure working in Postgres. Next, let's move on to a DAG. Finally, consider cycles.
-
-### ltree
-
-Inspired by http://patshaughnessy.net/2017/12/13/saving-a-tree-in-postgres-using-ltree
-
-<img src="http://patshaughnessy.net/assets/2017/12/11/example-tree.png">
-
-http://patshaughnessy.net/assets/2017/12/11/example-tree.png ^^
-
-```
-make tree
-```
-
-### DAG
-
-https://www.bustawin.com/dags-with-materialized-paths-using-postgres-ltree/
-
-```
-make dag
-```
