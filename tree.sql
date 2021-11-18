@@ -1,3 +1,6 @@
+drop table if exists tree;
+drop table if exists node;
+
 create extension ltree;
 
 create table tree(
