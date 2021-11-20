@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - 5432:5432
+
+  app:
+    image: chrismeyersfsu/explore-ltree-app:latest
+    restart: always
+    #stdin_open: true
+    tty: true
+    #entrypoint: "/bin/sh"
+    command: /bin/bash
+    volumes:
+      - ".:/data_dir"

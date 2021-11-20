@@ -92,3 +92,20 @@ make dag
 (3 rows)
 ```
 
+### inv
+
+```
+make run
+docker exec -it explore-ltree_app_1 /bin/bash
+./main.py
+```
+
+Leaf nodes that have an **anchor node** in their ancestory match the users query.
+
+* Find all anchor nodes
+
+#### TODO
+
+* Make sure that the anchor node matches the users original query. Currently, the anchor node _might_ match the users query, we need to fully verify.
+* Get all leaf nodes of an anchor node.
+* Resolve the var hierarchy of all the leaf nodes.
