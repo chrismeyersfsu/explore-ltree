@@ -97,7 +97,7 @@ make dag
 ```
 make run
 docker exec -it explore-ltree_app_1 /bin/bash
-./main.py
+./inv.py
 ```
 
 Leaf nodes that have an **anchor node** in their ancestory match the users query.
